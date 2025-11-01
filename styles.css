@@ -644,3 +644,23 @@ html {
 section {
     scroll-margin-top: 80px;
 }
+
+
+@media (max-width: 768px) {
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    /* Make sure text doesn't overflow */
+    .hero-title, .hero-description {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
