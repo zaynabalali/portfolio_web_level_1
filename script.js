@@ -28,12 +28,11 @@ const skillsData = [
     }
 ];
 
-// Projects Data
+
 // Projects Data
 const projectsData = [
     {
         title: "Small Portfolio",
-        image: "images/html-logo.webp",
         description: "A simple portfolio project for beginners, featuring a single-page layout with placeholder information, focusing on...",
         tags: ["HTML", "CSS", "JavaScript"],
         links: {
@@ -43,7 +42,6 @@ const projectsData = [
     },
     {
         title: "To Do List", 
-        image: "images/css-logo.webp",
         description: "A user-friendly task manager with local storage, allowing task management with dark mode and smooth animations for a...",
         tags: ["HTML", "SCSS", "JavaScript"],
         links: {
@@ -53,7 +51,6 @@ const projectsData = [
     },
     {
         title: "Snake Game",
-        image: "images/javascript-logo.webp", 
         description: "A simple yet engaging Snake game built with OOP and Turtle. Features multiple food types appearing randomly and...",
         tags: ["Python", "Turtle", "OOP"],
         links: {
@@ -126,12 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayProjects() {
     const projectsContainer = document.getElementById('projects-container');
     
-    projectsData.forEach(project => {
+    projectsData.forEach((project, index) => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card fade-in';
         
         projectCard.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <div class="project-image project-image-${index + 1}">
+                ${project.title}
+            </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
@@ -152,6 +151,7 @@ function displayProjects() {
         projectsContainer.appendChild(projectCard);
     });
 }
+
 // Smooth scrolling for navigation links with offset for fixed header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
