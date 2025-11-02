@@ -3,52 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website showcasing skills and projects">
+    <meta name="description" content="Zaynab Alali - Mathematics & Data Science Student | Web Developer Portfolio">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <!-- International Phone Input -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
     
     <title>Zaynab Alali - Portfolio</title>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
     <!-- Header Section -->
     <header>
         <nav>
             <div class="nav-brand">Zaynab Alali</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-         <div class="nav-social">
-    <a href="https://github.com/zaynabalali" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/zaynab-ali-38702b36" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="mailto:zaynabali95@icloud.com">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>
+            
+            <div class="nav-social">
+                <a href="https://github.com/zaynabalali" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zaynab-ali-38702b36" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:zaynabali95@icloud.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -59,114 +65,128 @@
             <div class="hero-content">
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Zaynab</span> 👋</h1>
                 <p class="hero-description">
-    Mathematics & Data Science student passionate about programming, data analysis, 
-    and creating innovative solutions. Certified in key technologies with strong 
-    project management skills.
-</p>
+                    Mathematics & Data Science student passionate about programming, data analysis, 
+                    and creating innovative solutions. Certified in key technologies with strong 
+                    project management skills.
+                </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Hire Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/hero-headshot.jpg" alt="Zaynab" class="hero-photo">
+    <img src="images/hero-headshot.jpg" alt="Zaynab Alali" class="hero-photo">
+</div>
             </div>
         </section>
 
         <!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-container" id="skills-container">
-        <!-- Skills will be dynamically added here -->
-    </div>
-</section>
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container" id="skills-container">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </section>
 
         <!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2 class="section-title">My Projects</h2>
-    <p class="section-subtitle">Here are some of my recent projects that showcase my skills and experience.</p>
-    <div class="projects-container" id="projects-container">
-        <!-- Projects will be dynamically added here -->
-    </div>
-</section>
-       <!-- Testimonials Section -->
-<section id="testimonials" class="testimonials-section">
-    <h2 class="section-title">Testimony</h2>
-    <div class="testimonial-container">
-        <div class="testimonial-card">
-            <p class="testimonial-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
-            <div class="testimonial-author">
-                <img src="images/testimony-headshot.webp" alt="John Doe" class="testimonial-photo">
-                <div class="author-info">
-                    <h4 class="author-name">John Doe</h4>
-                    <p class="author-title">LOREM IPSUM DOLOR SIT</p>
-                </div>
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some of my recent projects that showcase my skills and experience.</p>
+            <div class="projects-container" id="projects-container">
+                <!-- Projects will be dynamically added here -->
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-       <!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <h2 class="section-title">Let's Connect</h2>
-    <p class="section-subtitle">Ready to bring your ideas to life?</p>
-    
-    <div class="contact-container">
-        <!-- Left Column - Contact Info -->
-        <div class="contact-info">
-            <h3>Get in Touch</h3>
-            <p>Feel free to reach out to me for any inquiries, collaborations, or opportunities. Whether you have a project in mind, need assistance, or just want to connect, I'd be happy to hear from you. Fill out the form and I'll get back to you as soon as possible.</p>
-            
-            <div class="contact-details">
-               <div class="contact-item">
-    <div class="icon">
-        <i class="fas fa-envelope"></i>
-    </div>
-    <div class="contact-item-content">
-        <h4>EMAIL</h4>
-        <p>zaynabali95@icloud.com</p>
-    </div>
-</div>
-<div class="contact-item">
-    <div class="icon">
-        <i class="fas fa-phone"></i>
-    </div>
-    <div class="contact-item-content">
-        <h4>PHONE</h4>
-        <p>+961 81 323 369</p>
-    </div>
-</div>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Zaynab demonstrates exceptional problem-solving skills and attention to detail in her projects. Her ability to learn quickly and apply new technologies is impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">John Doe</h4>
+                            <p class="author-title">Senior Developer</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Right Column - Contact Form -->
-        <div class="contact-form">
-            <h3>Send Message</h3>
-            <p class="form-subtitle">I'll respond within 24 hours</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Ready to bring your ideas to life?</p>
             
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="full-name">Full Name *</label>
-                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            <div class="contact-container">
+                <!-- Left Column - Contact Info -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out to me for any inquiries, collaborations, or opportunities. Whether you have a project in mind, need assistance, or just want to connect, I'd be happy to hear from you.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <h4>EMAIL</h4>
+                                <p>zaynabali95@icloud.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <h4>PHONE</h4>
+                                <p>+961 81 323 369</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <!-- Right Column - Contact Form -->
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <p class="form-subtitle">I'll respond within 24 hours</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
+                            <div class="char-counter">0/300 words</div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-loading hidden">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </div>
+                        </button>
+                    </form>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
-                    <div class="char-counter">0/300 words</div>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
+            </div>
+        </section>
     </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
