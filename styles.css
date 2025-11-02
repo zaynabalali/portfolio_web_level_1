@@ -163,6 +163,36 @@ nav {
     transition: var(--transition);
     border-radius: 2px;
 }
+@media (max-width: 768px) {
+    /* Contact Form Mobile Alignment Fix */
+    .contact-form {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 500px;
+    }
+    
+    .contact-container {
+        justify-items: center;
+    }
+    
+    .contact-info {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        width: 95%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    
+    .contact-info {
+        width: 95%;
+    }
+}
 
 .mobile-menu-btn.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
