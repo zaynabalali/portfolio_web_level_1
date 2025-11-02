@@ -611,7 +611,7 @@ nav {
     gap: 1.5rem;
 }
 
-.testimonial-photo-placeholder {
+/*.testimonial-photo-placeholder {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -635,7 +635,14 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
 }
-
+/* Testimonial Photo Styles */
+.testimonial-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
 /* Contact Section Styles */
 .contact-section {
     text-align: left;
@@ -1023,6 +1030,24 @@ nav {
         font-size: 2.2rem;
     }
 }
+/* Contact Section Styles */
+.contact-section {
+    text-align: center; /* Add this line */
+}
+
+.contact-section .section-title,
+.contact-section .section-subtitle {
+    text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
+    text-align: left; /* Keep form left-aligned */
+}
 
 @media (max-width: 480px) {
     .hero-title {
@@ -1074,4 +1099,37 @@ nav {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+/* Wave Animation */
+.wave {
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+    cursor: default;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .wave {
+        animation: none;
+    }
+}
+.wave {
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+    cursor: default;
+    /* Optional: Add some spacing */
+    margin-left: 4px;
 }
