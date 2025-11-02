@@ -163,34 +163,47 @@ nav {
     transition: var(--transition);
     border-radius: 2px;
 }
+/* Contact Form Mobile Centering */
 @media (max-width: 768px) {
-    /* Contact Form Mobile Alignment Fix */
-    .contact-form {
-        margin: 0 auto;
-        width: 90%;
-        max-width: 500px;
+    .contact-section .section-title,
+    .contact-section .section-subtitle {
+        text-align: center;
+        padding: 0 1rem;
     }
     
     .contact-container {
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
     }
     
-    .contact-info {
-        width: 90%;
+    .contact-info,
+    .contact-form {
+        width: 100%;
         max-width: 500px;
         margin: 0 auto;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-form {
-        width: 95%;
-        margin: 0 auto;
-        padding: 1.5rem;
+    .contact-container {
+        padding: 0 0.5rem;
     }
     
-    .contact-info {
-        width: 95%;
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
     }
 }
 
