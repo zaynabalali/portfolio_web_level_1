@@ -58,12 +58,6 @@ body {
     border: 4px solid var(--gray-light);
     border-top: 4px solid var(--primary-color);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 /* Sections */
@@ -163,49 +157,6 @@ nav {
     transition: var(--transition);
     border-radius: 2px;
 }
-/* Contact Form Mobile Centering */
-@media (max-width: 768px) {
-    .contact-section .section-title,
-    .contact-section .section-subtitle {
-        text-align: center;
-        padding: 0 1rem;
-    }
-    
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        padding: 0 1rem;
-    }
-    
-    .contact-info,
-    .contact-form {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    .contact-form {
-        padding: 2rem;
-        box-sizing: border-box;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-container {
-        padding: 0 0.5rem;
-    }
-    
-    .contact-info,
-    .contact-form {
-        max-width: 100%;
-    }
-    
-    .contact-form {
-        padding: 1.5rem;
-    }
-}
 
 .mobile-menu-btn.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
@@ -239,7 +190,6 @@ nav {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .highlight {
@@ -265,13 +215,11 @@ nav {
     color: var(--text-light);
     margin-bottom: 2.5rem;
     line-height: 1.7;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
-    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .btn {
@@ -350,7 +298,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInRight 0.8s ease-out 0.6s both;
 }
 
 .hero-photo {
@@ -361,7 +308,6 @@ nav {
     border: 4px solid var(--primary-color);
     box-shadow: var(--shadow-hover);
     transition: var(--transition);
-    animation: fadeInRight 0.8s ease-out 0.6s both;
 }
 
 .hero-photo:hover {
@@ -422,14 +368,7 @@ nav {
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.6s ease-out forwards;
 }
-
-.skill-card:nth-child(1) { animation-delay: 0.1s; }
-.skill-card:nth-child(2) { animation-delay: 0.2s; }
-.skill-card:nth-child(3) { animation-delay: 0.3s; }
-.skill-card:nth-child(4) { animation-delay: 0.4s; }
-.skill-card:nth-child(5) { animation-delay: 0.5s; }
 
 .skill-card:hover {
     transform: translateY(-10px);
@@ -474,12 +413,7 @@ nav {
     transition: var(--transition);
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.6s ease-out forwards;
 }
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -611,7 +545,6 @@ nav {
     transition: var(--transition);
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.6s ease-out 0.4s both;
 }
 
 .testimonial-card:hover {
@@ -654,16 +587,12 @@ nav {
     gap: 1.5rem;
 }
 
-/*.testimonial-photo-placeholder {
+.testimonial-photo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.5rem;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
 }
 
 .author-name {
@@ -678,17 +607,10 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
 }
-/* Testimonial Photo Styles */
-.testimonial-photo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--primary-color);
-}
+
 /* Contact Section Styles */
 .contact-section {
-    text-align: left;
+    text-align: center;
 }
 
 .contact-section .section-title,
@@ -702,6 +624,7 @@ nav {
     gap: 4rem;
     margin-top: 3rem;
     align-items: start;
+    text-align: left;
 }
 
 /* Contact Info Styles */
@@ -885,40 +808,6 @@ nav {
     box-shadow: var(--shadow-hover);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* Utility Classes */
 .hidden {
     display: none !important;
@@ -930,7 +819,7 @@ nav {
         font-size: 3rem;
     }
     
-    .hero-photo-placeholder {
+    .hero-photo {
         width: 350px;
         height: 350px;
     }
@@ -963,25 +852,6 @@ nav {
         opacity: 1;
         visibility: visible;
     }
-    @media (max-width: 768px) {
-    /* ... your existing mobile styles ... */
-    
-    /* Add this for the hero photo */
-    .hero-photo {
-        width: 280px;
-        height: 280px;
-        margin-top: 1rem;
-    }
-}
-@media (max-width: 480px) {
-    /* ... your existing small screen styles ... */
-    
-    /* Add this for the hero photo on very small screens */
-    .hero-photo {
-        width: 250px;
-        height: 250px;
-    }
-}
     
     .nav-links a {
         padding: 0.5rem 0;
@@ -1027,10 +897,10 @@ nav {
         padding: 0.9rem 2rem;
     }
     
-    .hero-photo-placeholder {
+    .hero-photo {
         width: 280px;
         height: 280px;
-        font-size: 3rem;
+        margin-top: 1rem;
     }
     
     /* Skills Section */
@@ -1054,65 +924,7 @@ nav {
         max-width: 400px;
     }
     
-    /* Contact Section */
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .contact-form {
-        padding: 2rem;
-    }
-    
-    /* Sections */
-    section {
-        padding: 4rem 1.5rem;
-    }
-    
-    .section-title {
-        font-size: 2.2rem;
-    }
-}
-/* Contact Section Styles */
-.contact-section {
-    text-align: center; /* Add this line */
-}
-
-.contact-section .section-title,
-.contact-section .section-subtitle {
-    text-align: center;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-top: 3rem;
-    align-items: start;
-    text-align: left; /* Keep form left-aligned */
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .project-links {
-        flex-direction: column;
-    }
-    
+    /* Testimonials Section */
     .testimonial-card {
         padding: 2rem 1.5rem;
     }
@@ -1123,69 +935,46 @@ nav {
         gap: 1rem;
     }
     
-    .back-to-top {
-        bottom: 1rem;
-        right: 1rem;
-        width: 45px;
-        height: 45px;
+    /* Contact Section */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
     
-    html {
-        font-size: 14px;
+    .contact-form {
+        padding: 2rem;
     }
-}
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-/* Wave Animation */
-.wave {
-    display: inline-block;
-    animation: wave 2.5s infinite;
-    transform-origin: 70% 70%;
-    cursor: default;
-}
-
-@keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .wave {
-        animation: none;
-    }
-}
-.wave {
-    display: inline-block;
-    animation: wave 2.5s infinite;
-    transform-origin: 70% 70%;
-    cursor: default;
-    /* Optional: Add some spacing */
-    margin-left: 4px;
-}
-/* Contact Section Mobile Optimization */
-@media (max-width: 768px) {
-    .contact-section {
-        padding: 3rem 1rem;
+    
+    /* Contact Form Mobile Centering */
+    .contact-section .section-title,
+    .contact-section .section-subtitle {
+        text-align: center;
+        padding: 0 1rem;
     }
     
     .contact-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    
+    /* Contact Section Mobile Optimization */
+    .contact-section {
+        padding: 3rem 1rem;
     }
     
     .contact-info {
@@ -1237,9 +1026,50 @@ nav {
     .form-subtitle {
         font-size: 0.9rem;
     }
+    
+    /* Sections */
+    section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-photo {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+    
     .contact-section {
         padding: 2rem 0.5rem;
     }
@@ -1257,5 +1087,9 @@ nav {
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+    
+    html {
+        font-size: 14px;
     }
 }
