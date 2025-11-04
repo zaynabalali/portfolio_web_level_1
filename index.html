@@ -186,7 +186,14 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("5mo1V_OMmEQvKkOKs"); // Emailjs Public Key
+    })();
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
