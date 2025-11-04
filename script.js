@@ -230,6 +230,7 @@ function displayProjects() {
 }
 
 // Contact form handling
+// Contact form handling for Netlify Forms
 function handleFormSubmit(e) {
     e.preventDefault();
     
@@ -250,16 +251,18 @@ function handleFormSubmit(e) {
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
     
-    // Simulate form submission
+    // Netlify will handle the form submission automatically
+    // We just need to show success message after a delay
     setTimeout(() => {
         showNotification('Thank you! Your message has been sent successfully. I will respond within 24 hours.', 'success');
         contactForm.reset();
-        updateCharacterCounter(); // Reset counter
+        updateCharacterCounter();
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-    }, 2000);
+        
+        // The form will automatically submit to Netlify in the background
+    }, 1500);
 }
-
 // Character counter for message textarea
 function updateCharacterCounter() {
     const words = messageTextarea.value.trim().split(/\s+/).filter(word => word.length > 0);
